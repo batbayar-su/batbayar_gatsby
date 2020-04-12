@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 const CenteredLayout = ({ children }) => {
   return (
-    <div className="container mx-auto">
+    <div>
       <main>{children}</main>
     </div>
   )

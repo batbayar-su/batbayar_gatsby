@@ -1,31 +1,27 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 
 import CenteredLayout from "../components/layouts/centered"
 import SEO from "../components/seo"
-import chatbot from '../images/chatbot.svg'
-import terminal from '../images/terminal.svg'
-import webpage from '../images/webpage.svg'
+import StartIcon from "../components/start-icon"
+import chatbot from "../images/chatbot.svg"
+import terminal from "../images/terminal.svg"
+import webpage from "../images/webpage.svg"
+import "./index.css"
 
 const IndexPage = () => {
-
-  return <CenteredLayout>
-    <SEO title="Home" />
-    <div className="flex flex-col h-screen items-center">
-      <h1 className="text-6xl pt-20">Choose your way to experience</h1>
-      <div className="flex flex-grow w-full items-center justify-between -mt-20">
-        <div className="flex-1 px-20">
-          <img src={terminal} />
-        </div>
-        <div className="flex-1 px-20">
-          <img src={webpage} />
-        </div>
-        <div className="flex-1 px-20">
-          <img src={chatbot} />
+  return (
+    <CenteredLayout>
+      <SEO title="Home" />
+      <div className="flex flex-col h-screen items-center primary-bg">
+        <h1 className="text-2xl md:text-4xl pt-20 choose-experience-text">Choose your way to experience</h1>
+        <div className="flex flex-grow w-full items-center justify-between -mt-20">
+          <StartIcon src={terminal} text="Terminal" />
+          <StartIcon src={webpage} text="Webpage" link="https://batbayar-su.github.io/" />
+          <StartIcon src={chatbot} text="Chatbot" />
         </div>
       </div>
-    </div>
-  </CenteredLayout>
+    </CenteredLayout>
+  )
 }
 
 export default IndexPage
