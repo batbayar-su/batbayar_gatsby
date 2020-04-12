@@ -1,0 +1,12 @@
+@import '../styles/variables.scss';
+
+.chooseExperienceText {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 3px $base-color, 3px 4px #fff;
+}
+
+.baseColorBg {
+  background-color: $base-color;
+}
